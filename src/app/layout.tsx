@@ -22,8 +22,9 @@ export default function RootLayout({
             {children}
             <Sonner
               richColors
-              className={`${IRANSansX.className}`}
               closeButton
+              // className={`${IRANSansX.className}`}
+              style={IRANSansX.style}
             />
           </>
         </SidebarProvider>
