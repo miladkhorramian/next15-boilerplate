@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { IRANSansX } from "./fonts";
-import { SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster as Sonner } from "sonner";
 import "./globals.css";
 
@@ -17,17 +16,8 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl" className={`${IRANSansX.className}`}>
       <body>
-        <SidebarProvider>
-          <>
-            {children}
-            <Sonner
-              richColors
-              closeButton
-              // className={`${IRANSansX.className}`}
-              style={IRANSansX.style}
-            />
-          </>
-        </SidebarProvider>
+        {children}
+        <Sonner richColors closeButton style={IRANSansX.style} />
       </body>
     </html>
   );
